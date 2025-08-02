@@ -72,8 +72,6 @@
                     this.msgFlag = false
                     // this.form.code = (Math.random()*1000000).toFixed(0)
                     const res = await sendMsgApi({phone: this.form.phone})
-                    console.log(res)
-                    console.log(res.data)
                     this.form.code = res.data
                 } else {
                     this.msgFlag = true

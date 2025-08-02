@@ -20,7 +20,6 @@ import java.util.Arrays;
 @WebFilter(filterName = "loginCheckFilter", urlPatterns = "/*")
 @Slf4j
 public class LoginCheckFilter implements Filter {
-
     // 路径匹配器，可使用通配符
     public static final AntPathMatcher PATH_MATCHER = new AntPathMatcher();
 
@@ -85,7 +84,6 @@ public class LoginCheckFilter implements Filter {
             filterChain.doFilter(request, response);
             return;
         }
-
         // 没有登录,通过输出流返回数据
         response.getWriter().write(JSON.toJSONString(R.error("NOTLOGIN")));
         return;

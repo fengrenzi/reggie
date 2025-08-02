@@ -1,6 +1,15 @@
 server:
   port: 8080
 spring:
+  thymeleaf:
+    cache: true
+  web:
+    resources:
+      cache:
+        period: 0
+  devtools:
+    restart:
+      additional-paths: src/main/java
   application:
     name: reggie
   datasource:
